@@ -1,0 +1,160 @@
+↑isRoot: true
+comment: My First Page as root page
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-page
+title: First page
+↓Header [mobile.components.UIDynamicElement-1491634212350]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1491634231108]: 
+    beanData: '{"ionBean":"NavBar"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1491634265317]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1491634275121]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:My First App
+    ↓Button [mobile.components.UIDynamicElement-1491634442029]: 
+      beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1491634475867]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1491634611427]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634621907]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1491634637555]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
+↓Content [mobile.components.UIDynamicElement-1489674805352]: 
+  beanData: '{"ionBean":"Content"}'
+  comment: Page content
+  tagName: ion-content
+  ↓Grid [mobile.components.UIDynamicElement-1620139401887]: 
+    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
+    ↓GridRow [mobile.components.UIDynamicElement-1620139405965]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1620139410535]: 
+        beanData: |
+          '{
+           "ionBean": "GridCol",
+           "ColumnsMedium": "plain:12",
+           "ColumnsLarge": "plain:12"
+          }'
+        tagName: ion-col
+        ↓Directive [mobile.components.UIControlDirective-1620140180860]: 
+          directiveSource: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"formationMarkem","input":"","model":{"data":[{"sequence":"formationMarkem.getNews","marker":""}],"path":"?.news?.new","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓CardContainer [mobile.components.UIDynamicElement-1620139591414]: 
+            beanData: '{"ionBean":"Card"}'
+            tagName: ion-card
+            ↓CardHeader [mobile.components.UIDynamicElement-1620139601879]: 
+              beanData: '{"ionBean":"CardHeader"}'
+              tagName: ion-card-header
+              ↓CardTitle [mobile.components.UIDynamicElement-1620139606766]: 
+                beanData: '{"ionBean":"CardTitle"}'
+                tagName: ion-card-title
+                ↓H1 [mobile.components.UIDynamicElement-1620139679137]: 
+                  beanData: '{"ionBean":"Heading1"}'
+                  tagName: h1
+                  ↓Text [mobile.components.UIText-1620140589626]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Iteration","project":"formationMarkem","input":"","model":{"data":[{"priority":1620140180860}],"path":"?.title","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓Event [mobile.components.UIControlEvent-1620140916808]: 
+                  attrName: (click)
+                  eventName: onClick
+                  ↓PushPage [mobile.components.UIDynamicAction-1620141630235]: 
+                    beanData: |
+                      '{
+                       "ionBean": "PushPageAction",
+                       "page": "plain:formationMarkem.MobileApplication.Application.Page_1",
+                       "data": "source:{\"filter\":\"Iteration\",\"project\":\"formationMarkem\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1620140180860}],\"path\":\"?.description\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"item1620140180860\",\"useCustom\":true}}"
+                      }'
+                ↓Style [mobile.components.UIStyle-1620141285894]: 
+                  styleContent: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          '	background-color: red;
+                          '
+                ↓Attr [mobile.components.UIAttribute-1620141336320]: 
+                  attrName: class
+                  attrValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:cardTitle
+            ↓CardContent [mobile.components.UIDynamicElement-1620139609014]: 
+              beanData: '{"ionBean":"CardContent"}'
+              tagName: ion-card-content
+↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1491634317538]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [mobile.components.UIDynamicElement-1491634325595]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:left"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634332730]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1491634340354]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 1
+    ↓ButtonSet1 [mobile.components.UIDynamicElement-1491634373539]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634376874]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1491634383107]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 2
+↓PageEvent [mobile.components.UIPageEvent-1620139790926]: 
+  ↓CallSequence [mobile.components.UIDynamicAction-1620139862041]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:formationMarkem.getNews"}'
+    ↓name [mobile.components.UIControlVariable-1620140529110]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Mathieu
+    ↓lastName [mobile.components.UIControlVariable-1620140529112]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:

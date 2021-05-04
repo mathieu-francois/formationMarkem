@@ -1,0 +1,8 @@
+https: true
+port: 443
+server: lemonde.fr
+↓getNews [transactions.XmlHttpTransaction]: 
+  subDir: rss/une.xml
+↓getNews1 [transactions.HttpTransaction]: 
+  ↑default: true
+  subDir: rss/une.xml

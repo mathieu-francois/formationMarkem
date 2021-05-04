@@ -1,0 +1,151 @@
+clientCachable: true
+↓Input_variables [steps.InputVariablesStep-1620132188751]: 
+↓Call_Transaction [steps.TransactionStep-1620130749200]: 
+  sourceTransaction: formationMarkem.RSSLemonde.getNews
+↓news [steps.XMLComplexStep-1620131231228]: 
+  nodeName: news
+  ↓Iterator [steps.IteratorStep-1620130957720]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1620130749200
+          - java.lang.String: 
+            - ↑value: ./document/rss/channel/item
+    ↓news [steps.XMLComplexStep-1620131458427]: 
+      nodeName: new
+      ↓jSimpleSource [steps.SimpleSourceStep-1620131952349]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1620130957720
+              - java.lang.String: 
+                - ↑value: ./title/text()
+        variableName: title
+      ↓upperCase [steps.SimpleStep-1620131752230]: 
+        expression: title = title.toUpperCase();
+      ↓jElement [steps.ElementStep-1620131873179]: 
+        expression: title
+        nodeName: title
+      ↓Element_1 [steps.XMLElementStep-1620131352119]: 
+        nodeName: description
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1620130957720
+              - java.lang.String: 
+                - ↑value: ./description/text()
+      ↓Element [steps.XMLElementStep-1620132169990]: 
+        nodeName: name
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1620132188751
+              - java.lang.String: 
+                - ↑value: ./name/text()
+      ↓Element_2 [steps.XMLElementStep-1620132244609]: 
+        nodeName: lastName
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1620132188751
+              - java.lang.String: 
+                - ↑value: ./lastName/text()
+      ↓jIf [steps.IfStep-1620132554122]: 
+        condition: title.includes("COVID")
+        ↓Concat [steps.XMLConcatStep-1620132418408]: 
+          nodeName: concat
+          separator: 
+          sourcesDefinition: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                  - com.twinsoft.convertigo.beans.common.XMLVector: 
+                    - java.lang.String: 
+                      - ↑value: description
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                      - com.twinsoft.convertigo.beans.common.XMLVector: 
+                        - java.lang.String: 
+                          - ↑value: 1620132169990
+                        - java.lang.String: 
+                          - ↑value: ./text()
+                    - java.lang.String: 
+                      - ↑value: ''
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                  - com.twinsoft.convertigo.beans.common.XMLVector: 
+                    - java.lang.String: 
+                      - ↑value: description
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                      - com.twinsoft.convertigo.beans.common.XMLVector: 
+                        - java.lang.String: 
+                          - ↑value: 1620132244609
+                        - java.lang.String: 
+                          - ↑value: ./text()
+                    - java.lang.String: 
+                      - ↑value: ''
+  ↓Parallel [steps.ParallelStep-1620132678533]: 
+    maxNumberOfThreads: 1
+    ↓Serial [steps.SerialStep-1620142732701]: 
+      ↓Count [steps.XMLCountStep-1620132812686]: 
+        nodeName: count
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1620132244609
+              - java.lang.String: 
+                - ↑value: .
+      ↓Copy [steps.XMLCopyStep-1620132801894]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1620130749200
+              - java.lang.String: 
+                - ↑value: ./document/rss
+    ↓Count [steps.XMLCountStep-1620142745072]: 
+      nodeName: count
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1620132244609
+            - java.lang.String: 
+              - ↑value: .
+    ↓Copy [steps.XMLCopyStep-1620142745075]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1620130749200
+            - java.lang.String: 
+              - ↑value: ./document/rss
+↓Process_execute [steps.ProcessExecStep-1620142819552]: 
+  commandLine: '"cmd /C dir"'
+  output: true
+↓name [variables.RequestableVariable-1620132150766]: 
+  value: 
+↓lastName [variables.RequestableVariable-1620132196511]: 
+↓firstTest [core.TestCase]: 
+  ↓name [variables.TestCaseVariable-1620132268765]: 
+    value: fffff
+  ↓lastName [variables.TestCaseVariable-1620132268767]: 
+    value: François

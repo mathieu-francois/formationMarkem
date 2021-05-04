@@ -1,0 +1,101 @@
+↓Read_CSV [steps.ReadCSVStep-1620134859284]: 
+  dataFile: '".//dataset/data/sifold.csv"'
+  isEnabled: false
+  output: true
+  titleLine: true
+↓Element [steps.XMLElementStep-1620136353532]: 
+  isEnabled: false
+  nodeName: titre
+  nodeText: titre
+  output: false
+↓Element1 [steps.XMLElementStep-1620136411740]: 
+  isEnabled: false
+  nodeName: desc
+  nodeText: Description
+  output: false
+↓Concat [steps.XMLConcatStep-1620136550427]: 
+  isEnabled: false
+  nodeName: col
+  output: false
+  separator: ;
+  sourcesDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: description
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1620136353532
+                - java.lang.String: 
+                  - ↑value: ./text()
+            - java.lang.String: 
+              - ↑value: ''
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: description
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1620136411740
+                - java.lang.String: 
+                  - ↑value: ./text()
+            - java.lang.String: 
+              - ↑value: ''
+↓Write_CSV [steps.WriteCSVStep-1620136529138]: 
+  appendResult: true
+  isEnabled: false
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1620136550427
+        - java.lang.String: 
+          - ↑value: ./text()
+  titleLine: true
+↓Call_Sequence [steps.SequenceStep-1620135654977]: 
+  sourceSequence: formationMarkem.getNews
+  ↓name [variables.StepVariable-1620135709664]: 
+    value: Mathieu
+  ↓lastName [variables.StepVariable-1620135709666]: 
+    value: Francois
+↓Iterator [steps.IteratorStep-1620136040992]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1620135654977
+        - java.lang.String: 
+          - ↑value: ./document/news/new
+  ↓Write_CSV [steps.WriteCSVStep-1620135646858]: 
+    appendResult: true
+    dataFile: '".//dataset/data/mynewfile.csv"'
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1620136040992
+          - java.lang.String: 
+            - ↑value: .
+↓Sort [steps.XMLSortStep-1620137472734]: 
+  isEnabled: false
+  orderSort: Descending
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1620135654977
+        - java.lang.String: 
+          - ↑value: ./document/news/new

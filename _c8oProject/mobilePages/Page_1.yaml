@@ -1,0 +1,63 @@
+preloadPriority: high
+segment: path-to-page_1
+title: Page 2
+↓Header [mobile.components.UIDynamicElement-1620141897904]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1620141897907]: 
+    beanData: '{"ionBean":"NavBar"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1620141897910]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1620141897913]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:My First App
+    ↓Button [mobile.components.UIDynamicElement-1620141897916]: 
+      beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1620141897919]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1620141897922]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1620141897925]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1620141897928]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
+↓Content [mobile.components.UIDynamicElement-1620141728119]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓CardContainer [mobile.components.UIDynamicElement-1620141746295]: 
+    beanData: '{"ionBean":"Card"}'
+    tagName: ion-card
+    ↓CardTitle [mobile.components.UIDynamicElement-1620141757901]: 
+      beanData: '{"ionBean":"CardTitle"}'
+      tagName: ion-card-title
+      ↓H1 [mobile.components.UIDynamicElement-1620141778743]: 
+        beanData: '{"ionBean":"Heading1"}'
+        tagName: h1
+        ↓Text [mobile.components.UIText-1620141800368]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.navParams.data.title
+      ↓Event [mobile.components.UIControlEvent-1620141847795]: 
+    ↓CardContent [mobile.components.UIDynamicElement-1620141754830]: 
+      beanData: '{"ionBean":"CardContent"}'
+      tagName: ion-card-content
+      ↓Paragraph [mobile.components.UIDynamicElement-1620141987673]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1620141994801]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.navParams.data.description
